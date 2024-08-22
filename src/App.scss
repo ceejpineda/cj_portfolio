@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+html{
+  @apply bg-gray-100
+}
+
+html {
+  @apply bg-gray-100;
+}
+
+.hero-img {
+  @apply w-80 aspect-square;
+  position: relative;
+  background-image: url("/assets/IMG_8992.JPG");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+
+  @media (max-width: 500px) {
+    width: 19rem;
+  }
+
+  animation: morph 8s linear infinite, gradient 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.4rem; /* Adjust according to border width */
+    right: -0.4rem;
+    bottom: -0.4rem;
+    left: -0.4rem;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(270deg, #00f2ff, #f6d860, #ff00e1);
+    background-size: 400% 400%;
+    animation: gradient-border 8s linear infinite;
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    30% {
+      border-radius: 45% 55% 45% 55% / 45% 45% 55% 55%;
+    }
+
+    60% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+  }
+
+  @keyframes gradient-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+
+
+  
