@@ -37,14 +37,22 @@ export default function Hero() {
   ]
 
   const techStackRowFour = [
+    {name: "Linux", src: "/assets/icons/linux.svg"},
     {name: "Docker", src: "/assets/icons/docker.svg"},
     {name: "Git", src: "/assets/icons/git-icon.svg"},
-    {name: "Postman", src: "/assets/icons/postman.svg"},
+    {name: "Nginx", src: "/assets/icons/nginx.svg"},
+    {name: "AWS", src: "/assets/icons/aws.svg"},
+    {name: "DigitalOcean", src: "/assets/icons/digitalocean.svg"},
+    {name: "PM2", src: "/assets/icons/pm2.svg"},
+  ]
+
+  const testingStack = [
+    {name: "Postman", src: "/assets/icons/postman.svg"}
   ]
 
     return (
         <>
-          <div id="hero" className='min-h-[90vh] lg:min-h-[98vh] m-[2vh] px-8 lg:px-28'>
+          <div id="hero" className='max-w-7xl min-h-[90vh] lg:min-h-[98vh] m-[2vh] px-8 lg:px-28'>
             <div className="flex flex-col items-center justify-between w-full text-center lg:flex-row md:min-h-[62vh]">
               <div className='flex justify-between order-2 mt-8 lg:order-1'>
                 <motion.div
@@ -55,7 +63,7 @@ export default function Hero() {
                   <div className='flex flex-col gap-5 text-center lg:text-left items-center'>
                     <h1 className='text-4xl font-bold md:text-5xl lg:text-6xl'>
                       Hello, I'm 
-                      <p className='text-accent block mt-2 text-2xl md:text-3xl lg:text-6xl'>@ceejpineda.</p>
+                      <span className='text-accent block mt-2 text-2xl md:text-3xl lg:text-6xl'>@ceejpineda.</span>
                     </h1>
                     <p>
                       I'm an <span className="text-secondary">electronics engineer</span> turned <span className="text-secondary">software developer</span>.
@@ -89,7 +97,7 @@ export default function Hero() {
               transition={{ duration: 1 }}
             >
               <div className="flex flex-col items-center gap-5 sm:mt-5 lg:grid lg:grid-cols-2 lg:items-start lg:gap-10">
-                <h3 className='font-bold text-xl lg:text-3xl lg:col-span-2 lg:justify-self-center'>Professional Tech Stack</h3>
+                <h3 className='text-primary font-bold text-xl lg:text-3xl lg:col-span-2 lg:justify-self-center'>Professional Tech Stack</h3>
               
                 <div className='flex flex-col items-center gap-5 text-xl lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-10'>
                   <div className='flex flex-col items-center gap-2'>
@@ -141,7 +149,7 @@ export default function Hero() {
                   </div>
               
                   <div className='flex flex-col items-center gap-2'>
-                    <h4>Others:</h4>
+                    <h4>Server/Deployment:</h4>
                     <div className="flex flex-wrap justify-center gap-4 items-center">
                       {techStackRowFour.map((icon, index) => (
                         <Tooltip title={icon.name} key={index}>

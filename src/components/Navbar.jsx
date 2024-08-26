@@ -22,6 +22,7 @@ export default function Nav() {
   const navItems = [
     { to: "hero", label: "Home" },
     { to: "about", label: "About" },
+    { to: "experience", label: "Experience" },
     { to: "projects", label: "Projects" },
     { to: "contact", label: "Contact" }
   ];
