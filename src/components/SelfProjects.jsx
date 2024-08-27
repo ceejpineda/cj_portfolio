@@ -97,6 +97,10 @@ const contractedProjectData = [
         alt: "Wingcraft Models Home",
       },
       {
+        img: "/assets/projects/arcade/PacMan.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
         img: "/assets/projects/arcade/SpaceInvaders.png",
         alt: "Wingcraft Models Home",
       },
@@ -117,7 +121,7 @@ const contractedProjectData = [
         alt: "Wingcraft Models Home",
       },
     ],
-    name: "Classic Arcade Games (Duck Hunt, 1942-Space, etc)",
+    name: "Classic Arcade Games (Duck Hunt, 1942-Space, etc)<span id='arcade'></span>",
     git: "https://github.com/ceejpineda",
     url: "https://ceejpineda.github.io/arcade/",
     vid: "",
