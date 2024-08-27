@@ -145,7 +145,7 @@ export default function Project() {
     <>
       <div
         id="projects"
-        className="bg-neutral prose prose-base max-w-none p-8 md:px-28 lg:px-20 gap-y-10 lg:gap-y-0 pb-20 rounded-lg mb-10"
+        className="bg-base-300 prose prose-base max-w-none p-8 md:px-28 lg:px-20 gap-y-10 lg:gap-y-0 pb-20 rounded-lg mb-10"
       >
         <h2 className="text-primary mb-0 lg:mb-10 lg:mt-2">
           Personal Projects

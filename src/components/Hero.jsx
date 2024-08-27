@@ -72,9 +72,9 @@ export default function Hero() {
                     </p>
                     <a href={URL.CV} className='w-2/5 btn btn-primary bg-button text-primary-content' target='_blank'>View CV</a>
                     <div className="flex mt-2 w-full justify-center text-neutral-content">
-                      <a href={URL.linkedin} target='_blank'><LinkedInIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
-                      <a href={URL.github} target='_blank'><GitHubIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
-                      <a href={URL.email}><EmailIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
+                      <a href={URL.linkedin} target='_blank'><LinkedInIcon fontSize="large" className='text-accent cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
+                      <a href={URL.github} target='_blank'><GitHubIcon fontSize="large" className='text-accent cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
+                      <a href={URL.email}><EmailIcon fontSize="large" className='text-accent cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
                     </div>
                   </div>
                 </motion.div>

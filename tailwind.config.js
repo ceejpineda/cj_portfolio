@@ -9,11 +9,20 @@ module.exports = withMT({
     extend: {},
   },
   daisyui: {
+    base: false,
     themes: [
       "light", 
       "dark", 
       "cupcake", 
       "business",
+      "nord",
+      "winter",
+      {
+        "pastel": {
+          ...require("daisyui/src/theming/themes")["pastel"],
+          'base-100': '#f0f4f8',
+        }
+      },
       {
         "black": {
           ...require("daisyui/src/theming/themes")["black"],

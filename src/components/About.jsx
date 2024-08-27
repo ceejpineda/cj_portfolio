@@ -8,7 +8,7 @@ export default function About() {
     <>
       <div
         id="about"
-        className="prose prose-base bg-neutral py-16 max-w-none px-8 md:px-28 lg:px-20 flex flex-col items-center rounded-lg"
+        className="prose prose-base bg-base-300 py-16 max-w-none px-8 md:px-28 lg:px-20 flex flex-col items-center rounded-lg"
       >
         <div className="mx-auto w-full text-justify flex flex-col gap-x-10 lg:flex-row lg:items-center">
           <div className="flex items-center justify-center flex-1">

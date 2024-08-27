@@ -8,13 +8,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html{
-  @apply bg-gray-100
-}
-
-html {
-  @apply bg-gray-100;
-}
 
 .line {
   width: 4px;
@@ -24,10 +17,6 @@ html {
   position: fixed; /* Ensure it stays in place while scrolling */
   left: 50%; /* Center it horizontally */
   transform: translateX(-50%);
-}
-
-.line.scrolled {
-  background: linear-gradient(to bottom, #000, transparent);
 }
 
 .redacted {

@@ -1,4 +1,5 @@
 import React from "react";
+import { ThemeContext } from "../App";
 import { Link } from "react-scroll";
 import {
   Navbar,
@@ -8,9 +9,11 @@ import {
   Card,
   Collapse,
 } from "@material-tailwind/react";
+import ThemeButton from "./ThemeButton";
  
 export default function Nav() {
   const [openNav, setOpenNav] = React.useState(false);
+  const { theme } = React.useContext(ThemeContext);
  
   React.useEffect(() => {
     window.addEventListener(
@@ -44,11 +47,12 @@ export default function Nav() {
           </Link>
         </Typography>
       ))}
+      <ThemeButton />
     </ul>
   );
  
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none shadow-md py-2 px-4 lg:px-8 lg:py-4 bg-primary">
+    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none border-none shadow-md py-2 px-4 lg:px-8 lg:py-4 bg-primary" data-theme={theme}>
     <div className="flex items-center justify-between max-w-7xl mx-auto text-primary-content">
         <h4 className="cursor-pointer font-bold m-0 text-primary-content"> &lt;ceejpineda /&gt;</h4>
         <div className="flex items-center gap-4">
