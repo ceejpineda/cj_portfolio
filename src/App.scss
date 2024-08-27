@@ -33,6 +33,14 @@
   background-clip: text;
 }
 
+.glow-effect {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
 .hero-img {
   @apply w-80 aspect-square;
   position: relative;
