@@ -70,10 +70,10 @@ export default function Hero() {
                       <br/> 
                       Currently a <span className="text-secondary">Full Stack Developer</span>.
                     </p>
-                    <a href={URL.CV} className='w-2/5 btn btn-primary bg-button text-primary-content' target='_blank'>View CV</a>
+                    <a href={URL.CV} className='w-2/5 btn btn-primary bg-button text-primary-content' target='_blank' rel="noopener noreferrer">View CV</a>
                     <div className="flex mt-2 w-full justify-center text-neutral-content">
-                      <a href={URL.linkedin} target='_blank'><LinkedInIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
-                      <a href={URL.github} target='_blank'><GitHubIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
+                      <a href={URL.linkedin} target='_blank' rel="noopener noreferrer"><LinkedInIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
+                      <a href={URL.github} target='_blank' rel="noopener noreferrer"><GitHubIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
                       <a href={URL.email}><EmailIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
                     </div>
                   </div>

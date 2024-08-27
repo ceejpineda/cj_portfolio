@@ -40,6 +40,7 @@ export default function ProjectCard({
               <a
                 href={url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
               >
                 Live View
@@ -49,6 +50,7 @@ export default function ProjectCard({
               <a
                 href={git}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
               >
                 Github
@@ -58,6 +60,7 @@ export default function ProjectCard({
               <a
                 href={vid}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
               >
                 Video Demo
