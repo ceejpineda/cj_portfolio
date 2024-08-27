@@ -6,10 +6,10 @@ import EmailIcon from '@mui/icons-material/Email';
 import { Button, Tooltip } from '@mui/material';
 
 const URL = {
-  linkedin: 'https://www.linkedin.com/in/aldringuasa/',
-  github: 'https://github.com/ishnoopy',
-  email: 'mailto:aldringuasa@gmail.com',
-  CV: 'https://drive.google.com/file/d/1BWLa7FHfs1H8FnCeHRYw0tuAbUrbLd7t/view?usp=sharing'
+  linkedin: 'https://www.linkedin.com/in/pinedacj/',
+  github: 'https://github.com/ceejpineda',
+  email: 'mailto:pinedacj1020@@gmail.com',
+  CV: 'https://drive.google.com/file/d/1qrOGkFMZOFdwB_7W2R4J0VkGHzl_HnT6/view?usp=sharing'
 }
 
 
@@ -63,7 +63,7 @@ export default function Hero() {
                   <div className='flex flex-col gap-5 text-center lg:text-left items-center'>
                     <h1 className='text-4xl font-bold md:text-5xl lg:text-6xl'>
                       Hello, I'm 
-                      <span className='text-accent block mt-2 text-2xl md:text-3xl lg:text-6xl'>@ceejpineda.</span>
+                      <p className='text-accent block mt-2 text-2xl md:text-3xl lg:text-6xl'>@ceejpineda.</p>
                     </h1>
                     <p>
                       I'm an <span className="text-secondary">electronics engineer</span> turned <span className="text-secondary">software developer</span>.
@@ -96,10 +96,10 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className="flex flex-col items-center gap-5 sm:mt-5 lg:grid lg:grid-cols-2 lg:items-start lg:gap-10">
+              <div className="flex flex-col items-center gap-5 sm:mt-5 lg:grid lg:grid-cols-2 lg:items-start lg:gap-5">
                 <h3 className='text-primary font-bold text-xl lg:text-3xl lg:col-span-2 lg:justify-self-center'>Professional Tech Stack</h3>
               
-                <div className='flex flex-col items-center gap-5 text-xl lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-10'>
+                <div className='flex flex-col items-center gap-5 text-xl lg:col-span-2 lg:grid lg:grid-cols-2 lg:gap-5'>
                   <div className='flex flex-col items-center gap-2'>
                     <h4>Backend:</h4>
                     <div className="flex flex-wrap justify-center gap-4 items-center">

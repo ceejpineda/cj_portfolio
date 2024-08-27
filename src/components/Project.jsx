@@ -1,69 +1,64 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 
-const projectData = [
+const contractedProjectData = [
   {
-    src: "/assets/projects/pahina.png",
-    name: "Pahina",
+    src: [
+      {
+        img: "/assets/projects/wingcraft/wc3.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/wingcraft/wc1.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/wingcraft/wc2.png",
+        alt: "Wingcraft Models Home",
+      },
+    ],
+    name: "Wingcraft Models",
     git: "",
-    live: "",
-    url: "https://youtu.be/q4U_XKjuUZU",
+    url: "https://www.wingcraftmodels.com/",
+    vid: "",
     description:
-      "A Bookstore App made with Angular and ASP.NET Core. APIs are secured with JWT Authentication and Role-based authorization. It has a shopping cart, profile settings, history report, product comments, and a checkout page with email receipt. It also has a dashboard for the admin to manage the books and orders with report generation presented in Graphs and CSV files.",
+      "A website for a small business that sells model airplanes. It has a list of products, a showcase of the models and the process, and a contact form for inquiries and orders. It is made using <span class='text-secondary'>PHP, WordPress, Elementor, CPanel</span>. I'm responsible for the <span class='text-secondary'>design, development, and deployment</span> of the website.",
   },
   {
-    src: "/assets/projects/habibi.png",
-    name: "Habibi",
+    src: [
+      {
+        img: "/assets/projects/leasing/leasing3.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/leasing/leasing.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/leasing/leasing2.png",
+        alt: "Wingcraft Models Home",
+      },
+    ],
+    name: "<span class='redacted line-through'>*redacted*</span> Leasing",
     git: "",
-    live: "",
-    url: "https://youtu.be/9RcFPcBnd3I",
+    url: "",
+    vid: "",
     description:
-      "A Dating application made with Ruby on Rails. It has a matching algorithm, chat, video call, and a profile page. Users are able to like, or pass profiles and if both users liked each other, they will be matched and can start chatting.",
+      "A <span class='text-secondary'>property management</span> site that allows landlords to manage their properties and tenants. Create Offers, Contracts, Quotes, Invoices and etc. It is made using <span class='text-secondary'>Custom Python Framework, PostgreSQL, Docker and React</span>. I'm one of the main developer responsible for building <span class='text-secondary'>backend and frontend</span> of the site.",
   },
   {
-    src: "/assets/projects/exploar.png",
-    name: "ExploAR",
+    src: [
+      {
+        img: "/assets/projects/payportal/payportal.png",
+        alt: "Wingcraft Models Home",
+      }
+    ],
+    name: "PayPortal",
     git: "",
-    live: "",
-    url: "https://youtu.be/a4o_RM5jX58",
+    url: "",
+    vid: "",
     description:
-      "An AR application that aims to to provide an interactive experience to tourists in Bahay ni Rizal (Calamba, Philippines) as per request of the LGU of Calamba. This comes with an Admin dashboard that gives control over users and provides summary of data. This app is developed using Flutter, Dart, Firebase, Unity, Vuforia Engine, and C#.",
-  },
-  {
-    src: "/assets/projects/gorilla.png",
-    name: "Gorilla Skincare",
-    git: "",
-    live: "",
-    url: "https://youtu.be/eJSKeVxQ9Ec",
-    description:
-      "A skincare E-commerce website that features both user and admin CRUD functionality with Stripe payment integration. This is built using PHP Codeigniter, MySQL, HTML, and SCSS.",
-  },
-  {
-    src: "/assets/projects/youtube.png",
-    name: "Youtube Clone",
-    git: "",
-    live: "",
-    url: "https://youtu.be/w_vR2Fc3dq0",
-    description:
-      "A Youtube clone made with React + Vite and Youtube API. It has a video player, search function, and video recommendations.",
-  },
-  {
-    src: "/assets/projects/yourMemo.png",
-    name: "yourMemo",
-    git: "",
-    live: "",
-    url: "https://youtu.be/6wo5M8OMJ20",
-    description:
-      "A digital album application that stores user’s images and provide captions presented in a Polaroid format. Technologies used includes C#, ASP.net MVC Framework, HTML, CSS, and Firebase. ",
-  },
-  {
-    src: "/assets/projects/PSG.png",
-    name: "PSG MVC Framework",
-    git: "",
-    live: "",
-    url: "https://github.com/ishnoopy/PSG",
-    description:
-      "PSG is a lightweight MVC (Model-View-Controller) framework designed for Node.js and Express, offering a structured approach to building scalable applications while effectively separating application logic. Its key features include adhering to the MVC architecture, intuitive routing through Express, support for various database systems, the use of templating engines like EJS for dynamic views, and the ability to employ Express middleware for common tasks such as authentication and error handling.",
+      "A simple payment portal that allows users to submit payment to the client, it used an <span class='text-secondary'>external API</span> to manage the payment on Gcash/PayMaya and Crypto. It is made using <span class='text-secondary'>Next.js, Node.js, Express, MySQL</span>. I'm responsible for the <span class='text-secondary'>design, development, and deployment</span> of the website.",
   },
 ];
 
@@ -72,13 +67,13 @@ export default function Project() {
     <>
       <div
         id="projects"
-        className="bg-neutral prose prose-base max-w-none p-8 md:px-28 lg:px-20 gap-y-10 lg:gap-y-0 pb-20"
+        className="bg-neutral prose prose-base max-w-none p-8 md:px-28 lg:px-20 gap-y-10 lg:gap-y-0 pb-20 rounded-lg mb-10"
       >
-        <h2 className="text-primary mb-0 lg:mb-10 lg:mt-2">Projects</h2>
-        <div
-          className="flex flex-col items-center"
-        >
-          {projectData.map((project, index) => {
+        <h2 className="text-primary mb-0 lg:mb-10 lg:mt-2">
+          Contracted Projects
+        </h2>
+        <div className="flex flex-col items-center gap-10 lg:gap-32">
+          {contractedProjectData.map((project, index) => {
             return (
               <ProjectCard
                 key={index}

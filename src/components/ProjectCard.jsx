@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import Certificate from "./Certificate";
 
 export default function ProjectCard({
   imageSrc,
@@ -9,7 +10,7 @@ export default function ProjectCard({
   isEven,
   url,
   git,
-  live,
+  vid,
 }) {
   const orderClasses = isEven ? "lg:flex-row-reverse" : "lg:flex-row";
 
@@ -24,39 +25,54 @@ export default function ProjectCard({
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 0.9, ease: "easeInOut" }}
     >
-      <div className="group relative flex-1">
-        <img
+      <div className="flex-1">
+        {/* <img
           src={imageSrc}
           alt="Project Preview"
-          className="rounded-lg w-full shadow-lg"
+          className="rounded-lg w-full shadow-lg mb-2"
+        /> */}
+        <Certificate 
+          src={imageSrc}
         />
-        <div className="flex gap-2 lg:absolute bottom-0 left-0 right-0">
-          <a
-            href={url}
-            target="_blank"
-            className="w-1/3 lg:hidden lg:group-hover:block bg-accent bg-opacity-70 text-accent-content p-2 text-center rounded-lg"
-          >
-            Live View
-          </a>
-          <a
-            href={git}
-            target="_blank"
-            className="w-1/3 lg:hidden lg:group-hover:block bg-accent bg-opacity-70 text-accent-content p-2 text-center rounded-lg"
-          >
-            Github
-          </a>
-          <a
-            href={git}
-            target="_blank"
-            className="w-1/3 lg:hidden lg:group-hover:block bg-accent bg-opacity-70 text-accent-content p-2 text-center rounded-lg"
-          >
-            Video Demo
-          </a>
+        {(url || vid || git) ? (
+          <div className="inline-flex space-x-2 w-full justify-center mt-2">
+            {url && (
+              <a
+                href={url}
+                target="_blank"
+                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+              >
+                Live View
+              </a>
+            )}
+            {git && (
+              <a
+                href={git}
+                target="_blank"
+                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+              >
+                Github
+              </a>
+            )}
+            {vid && (
+              <a
+                href={vid}
+                target="_blank"
+                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+              >
+                Video Demo
+              </a>
+            )}
+          </div>
+        ) : (
+          <div className="inline-flex space-x-2 w-full justify-center mt-2 p-2 invisible">
+            a
+          </div>
+        )}
         </div>
-      </div>
       <div className="flex-1">
-        <h3 className="lg:text-center mt-0 lg:mt-10">{projectName}</h3>
-        <p className="text-justify">{projectDescription}</p>
+        <h3 className="lg:text-center mt-0 lg:mt-3" dangerouslySetInnerHTML={{__html: projectName}}></h3>
+        <p className="text-justify" dangerouslySetInnerHTML={{__html: projectDescription}}></p>
       </div>
     </motion.div>
   );

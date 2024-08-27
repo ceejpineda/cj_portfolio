@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export const Experience = () => {
   return (
-    <section id="experience" className="px-20 lg:px-64 flex flex-col gap-10 text-justify">
+    <section id="experience" className="px-5 lg:px-64 flex flex-col gap-10 text-justify">
       <h1 className="font-bold text-2xl text-primary">Experience</h1>
       <div>
         <span className="font-extralight text-sm">May 2024 - Present</span>
@@ -120,7 +120,8 @@ export const Experience = () => {
           <br />
           <br />
           I've also did some freelance work, creating websites for small
-          businesses and individuals during this time.
+          businesses and individuals that I know personally during this time.
+          This allowed me to practice my skills and learn new technologies.
         </p>
       </div>
       <div>

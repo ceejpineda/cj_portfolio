@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Project from './components/Project'
+import SelfProjects from './components/SelfProjects'
 import Footer from './components/Footer'
 import { Experience } from './components/Experience'
 
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Experience />
         <Project />
+        <SelfProjects />
       </div>
       <Footer />
     </>

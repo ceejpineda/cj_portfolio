@@ -30,6 +30,20 @@ html {
   background: linear-gradient(to bottom, #000, transparent);
 }
 
+.redacted {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: repeating-linear-gradient(
+    45deg,
+    #000,
+    #000 10px,
+    #fff 10px,
+    #fff 20px
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .hero-img {
   @apply w-80 aspect-square;
   position: relative;
