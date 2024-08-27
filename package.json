@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build && pm2 start ecosystem.config.cjs",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitejs/plugin-react": "^4.0.0",
     "daisyui": "^4.12.10",
     "eslint": "^8.44.0",
     "eslint-plugin-react": "^7.32.2",
