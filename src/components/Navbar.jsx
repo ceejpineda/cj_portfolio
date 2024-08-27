@@ -24,6 +24,7 @@ export default function Nav() {
     { to: "about", label: "About" },
     { to: "experience", label: "Experience" },
     { to: "projects", label: "Projects" },
+    { to: "arcade", label: "Arcade"},
     { to: "contact", label: "Contact" }
   ];
  
