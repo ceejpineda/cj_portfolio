@@ -14,7 +14,21 @@
 
 [data-theme="winter"] {
   --glow-color: theme('colors.primary'); /* Dark theme color */
+  color: theme('colors.primary');
 }
+
+[data-theme="dark"] .bottom-navigation {
+  background-color: theme('colors.neutral');
+}
+
+.bottom-navigation-action {
+  color: theme('colors.gray.700'); /* Default color */
+}
+
+[data-theme="dark"] .bottom-navigation-action {
+  color: theme('colors.gray.300'); /* Dark theme color */
+}
+
 
 
 .line {
