@@ -21,15 +21,22 @@
   background-color: theme('colors.neutral');
 }
 
+.bottom-navigation {
+  display: flex;
+  justify-content: space-around;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
 .bottom-navigation-action {
   color: theme('colors.gray.700'); /* Default color */
+  flex: 1;
+  min-width: 0;
 }
 
 [data-theme="dark"] .bottom-navigation-action {
   color: theme('colors.gray.300'); /* Dark theme color */
 }
-
-
 
 .line {
   width: 4px;

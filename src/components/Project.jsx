@@ -5,6 +5,36 @@ const contractedProjectData = [
   {
     src: [
       {
+        img: "/assets/projects/drcomoi/dr4.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/drcomoi/dr5.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/drcomoi/dr3.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/drcomoi/dr2.png",
+        alt: "Wingcraft Models Home",
+      },
+      {
+        img: "/assets/projects/drcomoi/dr1.png",
+        alt: "Wingcraft Models Home",
+      },
+    ],
+    name: "Dr. Comoi B2B",
+    git: "",
+    url: "https://www.drcomoi.com/",
+    vid: "",
+    description:
+      "A website for a business that sells beauty products. It has an online store, a contact form for inquiries, and order tracking on admin side. It is made using <span class='text-secondary'>Node.js, Express.js, MongoDB, React, TailwindCSS, AWS</span>. I'm responsible for the <span class='text-secondary'>frontend, backend development, and deployment</span> of the website.",
+  },
+  {
+    src: [
+      {
         img: "/assets/projects/wingcraft/wc3.png",
         alt: "Wingcraft Models Home",
       },
@@ -16,13 +46,18 @@ const contractedProjectData = [
         img: "/assets/projects/wingcraft/wc2.png",
         alt: "Wingcraft Models Home",
       },
+      {
+        img: "/assets/projects/wingcraft/wc4.png",
+        alt: "Wingcraft Models Home",
+      },
     ],
     name: "Wingcraft Models",
     git: "",
     url: "https://www.wingcraftmodels.com/",
     vid: "",
     description:
-      "A website for a small business that sells model airplanes. It has a list of products, a showcase of the models and the process, and a contact form for inquiries and orders. It is made using <span class='text-secondary'>PHP, WordPress, Elementor, CPanel</span>. I'm responsible for the <span class='text-secondary'>design, development, and deployment</span> of the website.",
+      `A website for a small business that sells model airplanes. It has a list of products, a showcase of the models and the process, and a contact form for inquiries and orders. It is made using <span class='text-secondary'>PHP, WordPress, Elementor, CPanel</span>. I'm responsible for the <span class='text-secondary'>design, development, and deployment</span> of the website.
+      It also has a admin side where the admin can manage the orders with a "kanban" style board. Made using <span class='text-secondary'>React, Node.js, Express.js, MongoDB</span>.`,
   },
   {
     src: [
@@ -39,7 +74,7 @@ const contractedProjectData = [
         alt: "Wingcraft Models Home",
       },
     ],
-    name: "<span class='redacted line-through'>*redacted*</span> Leasing",
+    name: "Seamless Leasing",
     git: "",
     url: "",
     vid: "",
