@@ -9,7 +9,7 @@ const URL = {
   linkedin: 'https://www.linkedin.com/in/pinedacj/',
   github: 'https://github.com/ceejpineda',
   email: 'mailto:pinedacj1020@@gmail.com',
-  CV: 'https://drive.google.com/file/d/1qrOGkFMZOFdwB_7W2R4J0VkGHzl_HnT6/view?usp=sharing'
+  CV: 'https://drive.google.com/file/d/1wmCTVf10zUtVLmlHU82mI0D7V5kOpzMC/view?usp=sharing'
 }
 
 
