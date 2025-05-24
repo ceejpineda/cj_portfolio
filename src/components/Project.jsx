@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { motion } from "framer-motion";
 
 const contractedProjectData = [
   {
@@ -99,31 +100,33 @@ const contractedProjectData = [
 
 export default function Project() {
   return (
-    <>
-      <div
-        id="projects"
-        className="bg-base-300 prose prose-base max-w-none p-8 md:px-28 lg:px-20 gap-y-10 lg:gap-y-0 pb-20 rounded-lg mb-10"
-      >
-        <h2 className="text-primary mb-0 lg:mb-10 lg:mt-2">
-          Contracted Projects
-        </h2>
-        <div className="flex flex-col items-center gap-10 lg:gap-32">
-          {contractedProjectData.map((project, index) => {
-            return (
-              <ProjectCard
-                key={index}
-                imageSrc={project.src}
-                projectName={project.name}
-                projectDescription={project.description}
-                url={project.url}
-                isEven={index % 2 == 1}
-                git={project.git}
-                live={project.live}
-              />
-            );
-          })}
-        </div>
+    <motion.div
+      id="projects"
+      className="bg-base-300 prose prose-base max-w-none p-8 md:px-16 lg:px-20 gap-y-10 lg:gap-y-0 pb-20 rounded-lg mb-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <h2 className="text-primary mb-0 lg:mb-10 lg:mt-2">
+        Contracted Projects
+      </h2>
+      <div className="flex flex-col items-center gap-10 lg:gap-32">
+        {contractedProjectData.map((project, index) => {
+          return (
+            <ProjectCard
+              key={index}
+              imageSrc={project.src}
+              projectName={project.name}
+              projectDescription={project.description}
+              url={project.url}
+              isEven={index % 2 == 1}
+              git={project.git}
+              live={project.live}
+            />
+          );
+        })}
       </div>
-    </>
+    </motion.div>
   );
 }

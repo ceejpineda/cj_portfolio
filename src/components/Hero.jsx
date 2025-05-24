@@ -9,7 +9,7 @@ const URL = {
   linkedin: 'https://www.linkedin.com/in/pinedacj/',
   github: 'https://github.com/ceejpineda',
   email: 'mailto:pinedacj1020@@gmail.com',
-  CV: 'https://drive.google.com/file/d/1wmCTVf10zUtVLmlHU82mI0D7V5kOpzMC/view?usp=sharing'
+  CV: 'https://drive.google.com/file/d/1YHieyrI0PwhRwm19_oi94fiRgwrbTAGu/view?usp=sharing'
 }
 
 
@@ -51,16 +51,22 @@ export default function Hero() {
   ]
 
     return (
-        <>
-          <div id="hero" className='max-w-7xl min-h-[90vh] lg:min-h-[98vh] m-[2vh] px-8 lg:px-28'>
+        <motion.div 
+          id="hero" 
+          className='max-w-7xl min-h-[90vh] lg:min-h-[98vh] m-[2vh] px-8 lg:px-20'
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }} // Trigger when 20% of the element is in view
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
             <div className="flex flex-col items-center justify-between w-full text-center lg:flex-row md:min-h-[62vh]">
               <div className='flex justify-between order-2 mt-8 lg:order-1'>
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 2 }}
-                >
-                  <div className='flex flex-col gap-5 text-center lg:text-left items-center'>
+                > */}
+                  <div className='flex flex-col gap-5 text-center lg:text-left items-center lg:items-start'>
                     <h1 className='text-4xl font-bold md:text-5xl lg:text-6xl'>
                       Hello, I'm 
                       <p className='text-accent block mt-2 text-2xl md:text-3xl lg:text-6xl'>@ceejpineda.</p>
@@ -72,7 +78,7 @@ export default function Hero() {
                     </p>
                     <a 
                       href={URL.CV} 
-                      className='w-2/5 btn btn-primary bg-button text-primary-content glow-effect' 
+                      className='w-auto px-6 btn btn-primary text-primary-content glow-effect self-center'
                       target='_blank' 
                       rel="noopener noreferrer"
                     >
@@ -84,25 +90,25 @@ export default function Hero() {
                       <a href={URL.email}><EmailIcon fontSize="large" className='cursor-pointer opacity-90 hover:scale-110 hover:opacity-100' /></a>
                     </div>
                   </div>
-                </motion.div>
+                {/* </motion.div> */}
               </div>
 
               <div className='flex justify-center order-1'>
-                  <motion.div
+                  {/* <motion.div
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1}}
                    transition={{ duration: 1 }}
-                  >
-                    <div className='hero-img aspect-square'></div>
-                  </motion.div>
+                  > */}
+                    <div className='hero-img aspect-square relative bg-cover bg-center bg-no-repeat w-80 max-sm:w-76' style={{ backgroundImage: 'url("/assets/IMG_8992.JPG")' }}></div>
+                  {/* </motion.div> */}
               </div>
             </div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
-            >
+            > */}
               <div className="flex flex-col items-center gap-5 sm:mt-5 lg:grid lg:grid-cols-2 lg:items-start lg:gap-5">
                 <h3 className='text-primary font-bold text-xl lg:text-3xl lg:col-span-2 lg:justify-self-center'>Professional Tech Stack</h3>
               
@@ -112,11 +118,13 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-4 items-center">
                       {backEndStack.map((icon, index) => (
                         <Tooltip title={icon.name} key={index}>
-                          <img
+                          <motion.img
                             src={icon.src}
                             alt={icon.name}
                             key={index}
-                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 hover:scale-150 duration-200 shadow-md'
+                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 shadow-md'
+                            whileHover={{ scale: 1.25, rotate: 5 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
                           />
                         </Tooltip>
                       ))}
@@ -128,11 +136,13 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-4 items-center">
                       {frontEndStack.map((icon, index) => (
                         <Tooltip title={icon.name} key={index}>
-                          <img
+                          <motion.img
                             src={icon.src}
                             alt={icon.name}
                             key={index}
-                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 hover:scale-150 duration-200 shadow-md'
+                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 shadow-md'
+                            whileHover={{ scale: 1.25, rotate: -5 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
                           />
                         </Tooltip>
                       ))}
@@ -144,11 +154,13 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-4 items-center">
                       {databaseStack.map((icon, index) => (
                         <Tooltip title={icon.name} key={index}>
-                          <img
+                          <motion.img
                             src={icon.src}
                             alt={icon.name}
                             key={index}
-                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 hover:scale-150 duration-200 shadow-md'
+                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 shadow-md'
+                            whileHover={{ scale: 1.25, y: -5 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
                           />
                         </Tooltip>
                       ))}
@@ -160,11 +172,13 @@ export default function Hero() {
                     <div className="flex flex-wrap justify-center gap-4 items-center">
                       {techStackRowFour.map((icon, index) => (
                         <Tooltip title={icon.name} key={index}>
-                          <img
+                          <motion.img
                             src={icon.src}
                             alt={icon.name}
                             key={index}
-                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 hover:scale-150 duration-200 shadow-md'
+                            className='aspect-square w-11 rounded-full bg-gray-200 border-2 border-gray-500 p-1 shadow-md'
+                            whileHover={{ scale: 1.25, rotate: 3 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 10 }}
                           />
                         </Tooltip>
                       ))}
@@ -172,9 +186,7 @@ export default function Hero() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
-
-        </>
+            {/* </motion.div> */}
+        </motion.div>
       );
     }

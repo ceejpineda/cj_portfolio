@@ -20,12 +20,17 @@ export default function ProjectCard({
   return (
     <motion.div
       ref={ref}
-      className={`flex flex-col ${orderClasses} lg:flex-row lg:justify-between lg:gap-x-10`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isInView ? 1 : 0 }}
-      transition={{ duration: 0.9, ease: "easeInOut" }}
+      className={`flex flex-col ${orderClasses} lg:flex-row lg:justify-between lg:gap-x-10 p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      whileHover={{ 
+        y: -6, 
+        scale: 1.03,
+        transition: { type: "spring", stiffness: 400, damping: 15 }
+      }}
     >
-      <div className="flex-1">
+      <div className="flex-1 mb-6 lg:mb-0">
         {/* <img
           src={imageSrc}
           alt="Project Preview"
@@ -41,7 +46,7 @@ export default function ProjectCard({
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+                className="bg-accent text-accent-content px-4 py-2 text-center rounded-lg no-underline hover:opacity-90 transition-opacity"
               >
                 Live View
               </a>
@@ -51,7 +56,7 @@ export default function ProjectCard({
                 href={git}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+                className="bg-accent text-accent-content px-4 py-2 text-center rounded-lg no-underline hover:opacity-90 transition-opacity"
               >
                 Github
               </a>
@@ -61,7 +66,7 @@ export default function ProjectCard({
                 href={vid}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-accent text-accent-content p-2 text-center rounded-lg no-underline"
+                className="bg-accent text-accent-content px-4 py-2 text-center rounded-lg no-underline hover:opacity-90 transition-opacity"
               >
                 Video Demo
               </a>
@@ -74,8 +79,8 @@ export default function ProjectCard({
         )}
         </div>
       <div className="flex-1">
-        <h3 className="lg:text-center mt-0 lg:mt-3" dangerouslySetInnerHTML={{__html: projectName}}></h3>
-        <p className="text-justify" dangerouslySetInnerHTML={{__html: projectDescription}}></p>
+        <h3 className="lg:text-center mt-4 lg:mt-3" dangerouslySetInnerHTML={{__html: projectName}}></h3>
+        <p className="text-left" dangerouslySetInnerHTML={{__html: projectDescription}}></p>
       </div>
     </motion.div>
   );

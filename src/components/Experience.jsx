@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export const Experience = () => {
   return (
-    <section id="experience" className="px-5 lg:px-64 flex flex-col gap-10 text-justify">
+    <motion.section 
+      id="experience" 
+      className="px-5 md:px-16 lg:px-20 flex flex-col gap-10 text-left"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }} // Lower amount due to potentially longer content
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <h1 className="font-bold text-2xl text-primary">Experience</h1>
       <div>
         <span className="font-extralight text-sm">May 2024 - Present</span>
         <div className="flex flex-col">
           <h2 className="font-bold text-xl text-accent">Fullstack Developer</h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-md italic">Seamless Leasing (UAE) -</h3>
-            <span className="text-s">Contract</span>
+            <h3 className="text-base italic">Seamless Leasing (UAE) -</h3>
+            <span className="text-sm">Contract</span>
           </div>
         </div>
 
-        <p className="pl-12 text-s">
+        <p className="pl-12 text-sm">
           As a main developer for Seamless Leasing, I utilized a <span className="text-secondary">custom
           Python full-stack framework</span> to develop and integrate real estate logic
           into the code. I translated <span className="text-secondary">Miro flowcharts and Balsamiq wireframes </span>
@@ -32,14 +40,14 @@ export const Experience = () => {
             Backend Developer (Node.js)
           </h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-md italic">
+            <h3 className="text-base italic">
               Zeniark Philippines Consulting Corp. -
             </h3>
-            <span className="text-s">Fulltime</span>
+            <span className="text-sm">Fulltime</span>
           </div>
         </div>
 
-        <p className="pl-12 text-s">
+        <p className="pl-12 text-sm">
           I led several key initiatives, with a primary focus on the PSSLAI
           project. I managed the{" "}
           <span className="text-secondary">migration of banking APIs</span>,
@@ -67,12 +75,12 @@ export const Experience = () => {
         <div className="flex flex-col">
           <h2 className="font-bold text-xl text-accent">Trainee</h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-md italic">Village 88 Inc. -</h3>
-            <span className="text-s">Trainee</span>
+            <h3 className="text-base italic">Village 88 Inc. -</h3>
+            <span className="text-sm">Trainee</span>
           </div>
         </div>
 
-        <p className="pl-12">
+        <p className="pl-12 text-sm">
           As a trainee, I focused on{" "}
           <span className="text-secondary">
             full-stack development training
@@ -97,12 +105,12 @@ export const Experience = () => {
         <div className="flex flex-col">
           <h2 className="font-bold text-xl text-accent">Career Break</h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-md italic">Self-employed</h3>
-            {/* <span className="text-s">Fulltime</span> */}
+            <h3 className="text-base italic">Self-employed</h3>
+            {/* <span className="text-sm">Fulltime</span> */}
           </div>
         </div>
 
-        <p className="pl-12">
+        <p className="pl-12 text-sm">
           During a career break from 2020 to 2023, I{" "}
           <span className="text-secondary">
             co-owned and managed Wingcraft Models
@@ -131,12 +139,12 @@ export const Experience = () => {
             Global Network Operations Engineer
           </h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-md italic">Converge ICT Solutions -</h3>
-            <span className="text-s">Fulltime</span>
+            <h3 className="text-base italic">Converge ICT Solutions -</h3>
+            <span className="text-sm">Fulltime</span>
           </div>
         </div>
 
-        <p className="pl-12">
+        <p className="pl-12 text-sm">
           As a Global Network Operations Center Engineer, I effectively
           responded to enterprise alerts, restored services, and managed
           incident resolution. I managed Cisco{" "}
@@ -157,6 +165,6 @@ export const Experience = () => {
           .
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
