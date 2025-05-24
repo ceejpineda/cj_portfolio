@@ -16,6 +16,7 @@ import { Gamepad, Home, List, MenuBookSharp, PausePresentation, Person, PersonOf
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ThemeButton from './components/ThemeButton'
+import CursorGlow from './components/CursorGlow'
 
 export const ThemeContext = React.createContext()
 
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <>
+      <CursorGlow />
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <Navbar/>
         <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
