@@ -13,24 +13,25 @@ export const Experience = () => {
     >
       <h1 className="font-bold text-2xl text-primary">Experience</h1>
       <div>
-        <span className="font-extralight text-sm">May 2024 - Present</span>
+        <span className="font-extralight text-sm">July 2024 - Present</span>
         <div className="flex flex-col">
-          <h2 className="font-bold text-xl text-accent">Fullstack Developer</h2>
+          <h2 className="font-bold text-xl text-accent">Fullstack Developer (Backend Focus)</h2>
           <div className="flex items-center gap-1">
-            <h3 className="text-base italic">Seamless Leasing (UAE) -</h3>
-            <span className="text-sm">Contract</span>
+            <h3 className="text-base italic">Umbra Digital Company -</h3>
+            <span className="text-sm">Full-Time Employment</span>
           </div>
         </div>
 
-        <p className="pl-12 text-sm">
-          As a main developer for Seamless Leasing, I utilized a <span className="text-secondary">custom
-          Python full-stack framework</span> to develop and integrate real estate logic
-          into the code. I translated <span className="text-secondary">Miro flowcharts and Balsamiq wireframes </span>
-          into scalable backend entities, ensuring accurate implementation of
-          business logic. My responsibilities included setting up caching
-          mechanisms, configuring cloud-based PostgreSQL database calls, and
-          integrating <span className="text-secondary">analytics and dashboards</span> for data insights.
-        </p>
+        <div className="pl-12 text-sm">
+          <p className="font-semibold mb-2">• Sunnies System / Sunnies Club</p>
+          <ul className="list-none pl-4 space-y-1">
+            <li>○ Led the backend migration of the Sunnies System from <span className="text-secondary">PHP to the MERN stack</span> by developing a custom backend API framework using <span className="text-secondary">Express and TypeScript</span>.</li>
+            <li>○ Spearheaded the company-wide <span className="text-secondary">backend and documentation API framework</span> for better workflow for developers.</li>
+            <li>○ Proposed and spearheaded the creation of <span className="text-secondary">staging environments</span> for existing codebases, improving development workflows.</li>
+            <li>○ Contributed to <span className="text-secondary">DevOps initiatives</span> and implemented <span className="text-secondary">CI/CD pipelines</span> for newer projects.</li>
+            <li>○ Designed and implemented internal APIs to integrate with <span className="text-secondary">Klaviyo workflows</span> for customer retention automation.</li>
+          </ul>
+        </div>
       </div>
 
       <div>
